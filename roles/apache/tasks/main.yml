@@ -1,0 +1,9 @@
+- name: Install Apache
+  apt: name=apache2 update_cache=yes state=latest
+
+- name: Copy Index.html
+  copy:
+    src: index.html
+    dest: /var/www/html/index.html
+    backup: yes
+
